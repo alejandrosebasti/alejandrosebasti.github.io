@@ -1,0 +1,9 @@
+---
+title: "Gallery"
+listing:
+  contents: gallery/*.md
+  sort: "date desc"
+  template: _gallery.ejs
+page-layout: full
+title-block-banner: false
+---
