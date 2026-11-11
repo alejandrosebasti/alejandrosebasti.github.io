@@ -1,0 +1,36 @@
+project:
+  type: website
+  output-dir: _site
+  resources:
+    - "images/**"
+  render:
+    - "*.qmd"
+    - "about.md"
+    - "posts/**/*.md"
+    - "gallery/*.md"
+
+website:
+  title: "rechu"
+  description: "Reviews, thoughts, research and photos."
+  site-url: ""
+  navbar:
+    left:
+      - text: Gaming
+        href: gaming.qmd
+      - text: Thoughts
+        href: thoughts.qmd
+      - text: Research
+        href: research.qmd
+      - text: Gallery
+        href: gallery.qmd
+      - text: About
+        href: about.md
+
+format:
+  html:
+    theme:
+      light: [cosmo, light.scss, styles.scss]
+      dark: [darkly, dark.scss, styles.scss]
+    toc: false
+    smooth-scroll: true
+    lightbox: true

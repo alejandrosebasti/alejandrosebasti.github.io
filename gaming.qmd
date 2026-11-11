@@ -1,0 +1,14 @@
+---
+title: "Gaming"
+subtitle: "Reviews and notes on games I've played."
+listing:
+  contents: posts/gaming
+  sort: "date desc"
+  type: default
+  categories: true
+  sort-ui: false
+  filter-ui: false
+  fields: [image, date, title, description, categories, reading-time]
+page-layout: full
+title-block-banner: false
+---

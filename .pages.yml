@@ -1,0 +1,158 @@
+# Browser editor settings for Pages CMS (https://app.pagescms.org)
+media:
+  input: images
+  output: /images
+  categories:
+  - image
+content:
+- name: gaming
+  label: Gaming
+  type: collection
+  path: posts/gaming
+  filename: '{year}-{month}-{day}-{primary}.md'
+  view:
+    fields:
+    - title
+    - date
+    primary: title
+    sort:
+    - date
+    - title
+    default:
+      sort: date
+      order: desc
+  fields:
+  - name: title
+    label: Title
+    type: string
+    required: true
+  - name: date
+    label: Date
+    type: date
+    required: true
+  - name: description
+    label: Short summary (shown in lists)
+    type: text
+  - name: image
+    label: Cover image (optional)
+    type: image
+  - name: categories
+    label: Tags
+    type: string
+    list: true
+  - name: body
+    label: Post
+    type: rich-text
+- name: thoughts
+  label: Thoughts
+  type: collection
+  path: posts/thoughts
+  filename: '{year}-{month}-{day}-{primary}.md'
+  view:
+    fields:
+    - title
+    - date
+    primary: title
+    sort:
+    - date
+    - title
+    default:
+      sort: date
+      order: desc
+  fields:
+  - name: title
+    label: Title
+    type: string
+    required: true
+  - name: date
+    label: Date
+    type: date
+    required: true
+  - name: description
+    label: Short summary (shown in lists)
+    type: text
+  - name: image
+    label: Cover image (optional)
+    type: image
+  - name: categories
+    label: Tags
+    type: string
+    list: true
+  - name: body
+    label: Post
+    type: rich-text
+- name: research
+  label: Research
+  type: collection
+  path: posts/research
+  filename: '{year}-{month}-{day}-{primary}.md'
+  view:
+    fields:
+    - title
+    - date
+    primary: title
+    sort:
+    - date
+    - title
+    default:
+      sort: date
+      order: desc
+  fields:
+  - name: title
+    label: Title
+    type: string
+    required: true
+  - name: date
+    label: Date
+    type: date
+    required: true
+  - name: description
+    label: Short summary (shown in lists)
+    type: text
+  - name: image
+    label: Cover image (optional)
+    type: image
+  - name: categories
+    label: Tags
+    type: string
+    list: true
+  - name: body
+    label: Post
+    type: rich-text
+- name: gallery
+  label: Gallery
+  type: collection
+  path: gallery
+  filename: '{year}-{month}-{day}-{hour}{minute}{second}.md'
+  view:
+    fields:
+    - image
+    - title
+    - date
+    primary: title
+    default:
+      sort: date
+      order: desc
+  fields:
+  - name: image
+    label: Photo
+    type: image
+    required: true
+  - name: title
+    label: Caption (optional)
+    type: string
+  - name: date
+    label: Date
+    type: date
+    required: true
+- name: about
+  label: About page
+  type: file
+  path: about.md
+  fields:
+  - name: title
+    label: Title
+    type: string
+  - name: body
+    label: Text
+    type: rich-text

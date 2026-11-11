@@ -1,0 +1,7 @@
+<div class="photo-grid">
+<% for (const item of items) { %>
+  <a href="<%- item.image %>" class="lightbox" data-gallery="photos"<% if (item.title) { %> data-description="<%= item.title %>"<% } %>>
+    <img src="<%- item.image %>" alt="<%= item.title || 'Photo' %>" loading="lazy">
+  </a>
+<% } %>
+</div>
