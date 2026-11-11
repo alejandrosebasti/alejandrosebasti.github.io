@@ -1,0 +1,13 @@
+<div class="post-list">
+<% for (const item of items) { const isPhoto = (item.path || '').indexOf('/gallery/') !== -1; %>
+<div class="post-row<%= isPhoto ? ' is-photo' : '' %>" <%= metadataAttrs(item) %>>
+<div class="post-meta"><div><%= item.date %></div><% if (isPhoto) { %><div>Photo</div><% } %></div>
+<% if (isPhoto) { %>
+<div class="post-main"><a href="<%- item.image %>" class="lightbox" data-gallery="all"<% if (item.title) { %> data-description="<%= item.title %>"<% } %>><img class="post-photo" src="<%- item.image %>" alt="<%= item.title || 'Photo' %>" loading="lazy"></a><% if (item.title) { %><div class="post-desc"><%= item.title %></div><% } %></div>
+<% } else { %>
+<div class="post-main"><a class="post-title" href="<%- item.outputHref %>"><%= item.title %></a><% if (item.description) { %><div class="post-desc"><%= item.description %></div><% } %></div>
+<% if (item.image) { %><a class="post-thumb" href="<%- item.outputHref %>"><img src="<%- item.image %>" alt="" loading="lazy"></a><% } %>
+<% } %>
+</div>
+<% } %>
+</div>

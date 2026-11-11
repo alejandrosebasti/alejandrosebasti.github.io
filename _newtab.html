@@ -22,3 +22,14 @@
     if (a.dataset.page === page) a.classList.add('active');
   });
 </script>
+<script>
+  // Open photos in a preview on the page (instead of going to the image file)
+  (function () {
+    if (window.GLightbox || !document.querySelector('a.lightbox')) return; // Quarto already handles pages with post images
+    var css = document.createElement('link'); css.rel = 'stylesheet'; css.href = '/assets/glightbox/glightbox.min.css';
+    document.head.appendChild(css);
+    var js = document.createElement('script'); js.src = '/assets/glightbox/glightbox.min.js';
+    js.onload = function () { GLightbox({ selector: '.lightbox', loop: true }); };
+    document.body.appendChild(js);
+  })();
+</script>

@@ -3,6 +3,7 @@ project:
   output-dir: _site
   resources:
     - "images/**"
+    - "assets/**"
   render:
     - "*.qmd"
     - "about.md"

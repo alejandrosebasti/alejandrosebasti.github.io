@@ -2,10 +2,11 @@
 pagetitle: "rechu"
 listing:
   id: posts
-  contents: posts
+  contents:
+    - posts
+    - gallery/*.md
   sort: "date desc"
-  type: default
-  fields: [image, date, title, description, reading-time]
+  template: _list.ejs
   sort-ui: false
   filter-ui: false
 page-layout: full
