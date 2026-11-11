@@ -15,18 +15,12 @@ website:
   site-url: ""
   navbar:
     left:
-      - text: All
-        href: index.qmd
-      - text: Gaming
-        href: gaming.qmd
-      - text: Thoughts
-        href: thoughts.qmd
-      - text: Research
-        href: research.qmd
-      - text: Gallery
-        href: gallery.qmd
       - text: About
         href: about.md
+      - text: Twitch
+        href: https://www.twitch.tv/rechu
+      - text: YouTube
+        href: https://www.youtube.com/@rechu
 
 format:
   html:
@@ -34,3 +28,4 @@ format:
     toc: false
     smooth-scroll: true
     lightbox: true
+    include-after-body: _newtab.html
