@@ -13,6 +13,7 @@ website:
   title: "rechu"
   description: "Reviews, thoughts, research and photos."
   site-url: "https://rechu.me"
+  favicon: favicon.png
   navbar:
     left:
       - text: About
