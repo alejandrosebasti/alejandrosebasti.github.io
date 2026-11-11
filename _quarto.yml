@@ -17,6 +17,8 @@ website:
     left:
       - text: About
         href: about.md
+      - text: Twitter
+        href: https://x.com/99rechu
       - text: Twitch
         href: https://www.twitch.tv/rechu
       - text: YouTube
