@@ -41,6 +41,6 @@ The example posts and the two sample photos are only there to show the layout. D
 | Gallery photos | `gallery/` (one small file per photo) and `images/` (the photo files) |
 | Site name and menu | `_quarto.yml` |
 | Home page intro | `index.qmd` |
-| Look and feel | `styles.scss`, `light.scss`, `dark.scss` |
+| Look and feel | `styles.scss`, `dark.scss` (black background, white text) |
 | Browser editor settings | `.pages.yml` |
 | Publishing | `.github/workflows/publish.yml` |

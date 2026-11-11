@@ -25,3 +25,10 @@ main.content { max-width: 760px; }
 }
 .navbar-brand-container { flex-grow: 1; justify-content: center; }
 .navbar-brand .navbar-title { font-size: 1.6rem; letter-spacing: .02em; }
+
+/* Black background, white text */
+a { text-decoration-color: rgba(255,255,255,.4); }
+.navbar .nav-link { color: rgba(255,255,255,.75) !important; }
+.navbar .nav-link:hover, .navbar .nav-link.active { color: #fff !important; }
+.listing-description, .listing-date, .listing-reading-time, .quarto-category { color: #b5b5b5 !important; }
+.quarto-post { border-bottom-color: #333 !important; }

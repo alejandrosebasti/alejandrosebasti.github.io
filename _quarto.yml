@@ -28,9 +28,7 @@ website:
 
 format:
   html:
-    theme:
-      light: [cosmo, light.scss, styles.scss]
-      dark: [darkly, dark.scss, styles.scss]
+    theme: [darkly, dark.scss, styles.scss]
     toc: false
     smooth-scroll: true
     lightbox: true
