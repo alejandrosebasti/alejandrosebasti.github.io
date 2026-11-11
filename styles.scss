@@ -1,11 +1,11 @@
 /*-- scss:defaults --*/
-$font-family-sans-serif: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+$web-font-path: "https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap";
+$font-family-sans-serif: "PT Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
 
 /*-- scss:rules --*/
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap");
 
 .navbar { box-shadow: none; border-bottom: 1px solid rgba(128,128,128,.15); }
-.navbar-brand .navbar-title { font-weight: 600; }
+.navbar-brand .navbar-title { font-weight: 700; }
 main.content { max-width: 760px; }
 .quarto-post .thumbnail img { border-radius: 6px; }
 .listing-grid .card { border: none; }
