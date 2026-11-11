@@ -12,7 +12,7 @@ project:
 website:
   title: "rechu"
   description: "Reviews, thoughts, research and photos."
-  site-url: ""
+  site-url: "https://rechu.me"
   navbar:
     left:
       - text: About
