@@ -17,11 +17,14 @@ website:
     left:
       - text: About
         href: about.md
-      - text: Twitter
+      - icon: twitter-x
+        aria-label: Twitter
         href: https://x.com/99rechu
-      - text: Twitch
+      - icon: twitch
+        aria-label: Twitch
         href: https://www.twitch.tv/rechu
-      - text: YouTube
+      - icon: youtube
+        aria-label: YouTube
         href: https://www.youtube.com/@rechu
 
 format:
