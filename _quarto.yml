@@ -35,3 +35,5 @@ format:
     smooth-scroll: true
     lightbox: true
     include-after-body: _newtab.html
+    filters:
+      - _links.lua

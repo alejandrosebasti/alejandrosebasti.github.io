@@ -36,6 +36,18 @@ content:
   - name: image
     label: Cover image (optional)
     type: image
+  - name: links
+    label: Links (study material, YouTube videos, your posts elsewhere)
+    type: object
+    list: true
+    fields:
+    - name: label
+      label: Title
+      type: string
+    - name: url
+      label: Link (https://...)
+      type: string
+      required: true
   - name: body
     label: Post
     type: rich-text
@@ -70,6 +82,18 @@ content:
   - name: image
     label: Cover image (optional)
     type: image
+  - name: links
+    label: Links (study material, YouTube videos, your posts elsewhere)
+    type: object
+    list: true
+    fields:
+    - name: label
+      label: Title
+      type: string
+    - name: url
+      label: Link (https://...)
+      type: string
+      required: true
   - name: body
     label: Post
     type: rich-text
@@ -104,6 +128,18 @@ content:
   - name: image
     label: Cover image (optional)
     type: image
+  - name: links
+    label: Links (study material, YouTube videos, your posts elsewhere)
+    type: object
+    list: true
+    fields:
+    - name: label
+      label: Title
+      type: string
+    - name: url
+      label: Link (https://...)
+      type: string
+      required: true
   - name: body
     label: Post
     type: rich-text
