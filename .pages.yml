@@ -36,10 +36,6 @@ content:
   - name: image
     label: Cover image (optional)
     type: image
-  - name: categories
-    label: Tags
-    type: string
-    list: true
   - name: body
     label: Post
     type: rich-text
@@ -74,10 +70,6 @@ content:
   - name: image
     label: Cover image (optional)
     type: image
-  - name: categories
-    label: Tags
-    type: string
-    list: true
   - name: body
     label: Post
     type: rich-text
@@ -112,10 +104,6 @@ content:
   - name: image
     label: Cover image (optional)
     type: image
-  - name: categories
-    label: Tags
-    type: string
-    list: true
   - name: body
     label: Post
     type: rich-text

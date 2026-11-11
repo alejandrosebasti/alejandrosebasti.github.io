@@ -1,9 +1,25 @@
 ---
 title: "Gallery"
 listing:
+  id: photos
   contents: gallery/*.md
   sort: "date desc"
   template: _gallery.ejs
+  sort-ui: false
+  filter-ui: false
 page-layout: full
 title-block-banner: false
 ---
+
+::::: {.site-layout}
+
+:::: {.site-main}
+::: {#photos}
+:::
+::::
+
+:::: {.site-side}
+{{< include _categories.md >}}
+::::
+
+:::::
