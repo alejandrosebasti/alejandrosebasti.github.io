@@ -15,6 +15,8 @@ website:
   site-url: ""
   navbar:
     left:
+      - text: All
+        href: index.qmd
       - text: Gaming
         href: gaming.qmd
       - text: Thoughts
