@@ -4,7 +4,7 @@ $font-family-sans-serif: "PT Sans", system-ui, -apple-system, "Segoe UI", Roboto
 
 /*-- scss:rules --*/
 
-.navbar { box-shadow: none; border-bottom: 1px solid rgba(128,128,128,.15); }
+.navbar { box-shadow: none; border-bottom: 1px solid #ffffff; }
 .navbar-brand .navbar-title { font-weight: 700; }
 main.content { max-width: 760px; }
 .quarto-post .thumbnail img { border-radius: 6px; }
