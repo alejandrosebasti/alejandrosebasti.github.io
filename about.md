@@ -1,4 +1,4 @@
 ---
 title: About
 ---
-Write a little about yourself here. You can edit this page in the browser editor under **About**.
+collection of my personal thoughts on my interests, including and not limited to; gaming, mathematics, technology, and nature 
