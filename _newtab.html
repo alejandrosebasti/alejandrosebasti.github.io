@@ -4,3 +4,15 @@
     if (a.hostname !== location.hostname) { a.target = '_blank'; a.rel = 'noopener'; }
   });
 </script>
+<script>
+  // Add a "Gallery" link under the Categories list
+  document.querySelectorAll('.quarto-listing-category').forEach(function (list) {
+    var link = document.createElement('a');
+    link.href = (document.querySelector('.navbar-brand') || {}).getAttribute
+      ? new URL('gallery.html', document.querySelector('.navbar-brand').href).href
+      : 'gallery.html';
+    link.textContent = 'Gallery';
+    link.className = 'gallery-link';
+    list.parentNode.insertBefore(link, list.nextSibling);
+  });
+</script>
