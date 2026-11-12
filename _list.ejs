@@ -1,8 +1,10 @@
 <div class="post-list">
 <% for (const item of items) { const isPhoto = (item.path || '').indexOf('/gallery/') !== -1; %>
 <div class="post-row<%= isPhoto ? ' is-photo' : '' %>" <%= metadataAttrs(item) %>>
-<div class="post-meta"><div><%= item.date %></div><% if (isPhoto) { %><div>Photo</div><% } %></div>
-<% if (isPhoto) { %>
+<div class="post-meta"><div><%= item.date %></div><% if (isPhoto) { %><div><%= item.video ? 'Video' : 'Photo' %></div><% } %></div>
+<% if (isPhoto && item.video) { %>
+<div class="post-main"><a href="<%- item.video %>" class="video-tile video-tile-wide" data-video="<%- item.video %>"<% if (item.title) { %> data-description="<%= item.title %>"<% } %>><video src="<%- item.video %>#t=0.1" muted loop playsinline preload="metadata"></video><span class="video-badge"><i class="bi bi-play-fill"></i></span></a><% if (item.title) { %><div class="post-desc"><%= item.title %></div><% } %></div>
+<% } else if (isPhoto) { %>
 <div class="post-main"><a href="<%- item.image %>" class="lightbox" data-gallery="all"<% if (item.title) { %> data-description="<%= item.title %>"<% } %>><img class="post-photo" src="<%- item.image %>" alt="<%= item.title || 'Photo' %>" loading="lazy"></a><% if (item.title) { %><div class="post-desc"><%= item.title %></div><% } %></div>
 <% } else { %>
 <div class="post-main"><a class="post-title" href="<%- item.outputHref %>"><%= item.title %></a><% if (item.description) { %><div class="post-desc"><%= item.description %></div><% } %></div>

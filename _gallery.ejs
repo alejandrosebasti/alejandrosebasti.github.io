@@ -1,7 +1,9 @@
 <div class="photo-grid">
 <% for (const item of items) { %>
-  <a href="<%- item.image %>" class="lightbox" data-gallery="photos"<% if (item.title) { %> data-description="<%= item.title %>"<% } %>>
-    <img src="<%- item.image %>" alt="<%= item.title || 'Photo' %>" loading="lazy">
-  </a>
+<% if (item.video) { %>
+<a href="<%- item.video %>" class="video-tile" data-video="<%- item.video %>"<% if (item.title) { %> data-description="<%= item.title %>"<% } %>><video src="<%- item.video %>#t=0.1" muted loop playsinline preload="metadata"></video><span class="video-badge"><i class="bi bi-play-fill"></i></span></a>
+<% } else if (item.image) { %>
+<a href="<%- item.image %>" class="lightbox" data-gallery="photos"<% if (item.title) { %> data-description="<%= item.title %>"<% } %>><img src="<%- item.image %>" alt="<%= item.title || 'Photo' %>" loading="lazy"></a>
+<% } %>
 <% } %>
 </div>

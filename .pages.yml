@@ -1,9 +1,22 @@
 # Browser editor settings for Pages CMS (https://app.pagescms.org)
 media:
+- name: images
+  label: Images
   input: images
   output: /images
   categories:
   - image
+- name: videos
+  label: Videos
+  input: videos
+  output: /videos
+  categories:
+  - video
+  extensions:
+  - mp4
+  - webm
+  - mov
+  - m4v
 content:
 - name: gaming
   label: Gaming
@@ -36,6 +49,8 @@ content:
   - name: image
     label: Cover image (optional)
     type: image
+    options:
+      media: images
   - name: links
     label: Links (study material, YouTube videos, your posts elsewhere)
     type: object
@@ -82,6 +97,8 @@ content:
   - name: image
     label: Cover image (optional)
     type: image
+    options:
+      media: images
   - name: links
     label: Links (study material, YouTube videos, your posts elsewhere)
     type: object
@@ -128,6 +145,8 @@ content:
   - name: image
     label: Cover image (optional)
     type: image
+    options:
+      media: images
   - name: links
     label: Links (study material, YouTube videos, your posts elsewhere)
     type: object
@@ -151,6 +170,7 @@ content:
   view:
     fields:
     - image
+    - video
     - title
     - date
     primary: title
@@ -159,9 +179,17 @@ content:
       order: desc
   fields:
   - name: image
-    label: Photo
+    label: Photo (leave empty if uploading a video)
     type: image
-    required: true
+    options:
+      media: images
+  - name: video
+    label: Video (MP4 works everywhere; keep it under ~50 MB)
+    type: file
+    options:
+      media: videos
+      categories:
+      - video
   - name: title
     label: Caption (optional)
     type: string

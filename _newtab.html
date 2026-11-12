@@ -33,3 +33,33 @@
     document.body.appendChild(js);
   })();
 </script>
+<script>
+  // Gallery videos: play muted on hover, open with sound and controls on click
+  (function () {
+    var tiles = document.querySelectorAll('.video-tile');
+    if (!tiles.length) return;
+    var hover = window.matchMedia('(hover: hover)').matches;
+    tiles.forEach(function (tile) {
+      var v = tile.querySelector('video');
+      if (hover) {
+        tile.addEventListener('mouseenter', function () { v.muted = true; v.play().catch(function () {}); });
+        tile.addEventListener('mouseleave', function () { v.pause(); });
+      }
+      tile.addEventListener('click', function (e) {
+        e.preventDefault(); v.pause();
+        var box = document.createElement('div'); box.className = 'video-modal';
+        box.innerHTML = '<button class="video-close" aria-label="Close">&times;</button>' +
+          '<video controls autoplay playsinline></video>' +
+          (tile.dataset.description ? '<div class="video-caption"></div>' : '');
+        var big = box.querySelector('video'); big.src = tile.dataset.video;
+        if (tile.dataset.description) box.querySelector('.video-caption').textContent = tile.dataset.description;
+        function close() { big.pause(); box.remove(); document.removeEventListener('keydown', onKey); }
+        function onKey(ev) { if (ev.key === 'Escape') close(); }
+        box.addEventListener('click', function (ev) { if (ev.target === box || ev.target.classList.contains('video-close')) close(); });
+        document.addEventListener('keydown', onKey);
+        document.body.appendChild(box);
+        big.play().catch(function () {});
+      });
+    });
+  })();
+</script>
