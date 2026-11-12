@@ -12,6 +12,11 @@
   })();
 </script>
 <script>
+  // Keep the page title inside the left column so Categories always starts at the same height
+  (function () {
+    var t = document.getElementById('title-block-header'), m = document.querySelector('.site-layout .site-main');
+    if (t && m && !m.contains(t)) m.insertBefore(t, m.firstChild);
+  })();
   // Open links to other sites (Twitch, YouTube, etc.) in a new tab
   document.querySelectorAll('a[href^="http"]').forEach(function (a) {
     if (a.hostname !== location.hostname) { a.target = '_blank'; a.rel = 'noopener'; }
