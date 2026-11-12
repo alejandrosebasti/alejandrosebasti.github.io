@@ -1,13 +1,13 @@
 <script>
-  // On pages without the Categories list (like About), add it on the right
+  // On pages without the Categories list (About, posts), add it on the right
   (function () {
     var main = document.querySelector('main#quarto-document-content');
-    if (!main || main.querySelector('.category-nav') || !/about(\.html)?$/.test(location.pathname)) return;
+    if (!main || main.querySelector('.category-nav')) return;
     var layout = document.createElement('div'); layout.className = 'site-layout';
     var left = document.createElement('div'); left.className = 'site-main';
     var side = document.createElement('div'); side.className = 'site-side';
     while (main.firstChild) left.appendChild(main.firstChild);
-    side.innerHTML = '<nav class="category-nav" aria-label="Categories"><div class="category-nav-title">Categories</div><a href="index.html" data-page="index">All</a><a href="gaming.html" data-page="gaming">Gaming</a><a href="thoughts.html" data-page="thoughts">Thoughts</a><a href="research.html" data-page="research">Research</a><a href="gallery.html" data-page="gallery">Gallery</a></nav>';
+    side.innerHTML = '<nav class="category-nav" aria-label="Categories"><div class="category-nav-title">Categories</div><a href="/index.html" data-page="index">All</a><a href="/gaming.html" data-page="gaming">Gaming</a><a href="/thoughts.html" data-page="thoughts">Thoughts</a><a href="/research.html" data-page="research">Research</a><a href="/gallery.html" data-page="gallery">Gallery</a></nav>';
     layout.appendChild(left); layout.appendChild(side); main.appendChild(layout);
   })();
 </script>
@@ -17,7 +17,10 @@
     if (a.hostname !== location.hostname) { a.target = '_blank'; a.rel = 'noopener'; }
   });
   // Highlight the current category
-  var page = (location.pathname.split('/').pop() || 'index.html').replace('.html', '') || 'index';
+  var parts = location.pathname.split('/');
+  var page = (parts.pop() || 'index.html').replace('.html', '') || 'index';
+  var sec = location.pathname.match(/\/posts\/([^\/]+)\//); if (sec) page = sec[1];
+  if (/\/gallery\//.test(location.pathname)) page = 'gallery';
   document.querySelectorAll('.category-nav a').forEach(function (a) {
     if (a.dataset.page === page) a.classList.add('active');
   });
